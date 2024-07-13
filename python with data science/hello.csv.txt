@@ -1,0 +1,18 @@
+name,age,roll
+"Hari",30,12
+'Ram',20,13
+from sqlalchemy import create_engine
+
+# 'postgresql://username:password@localhost:5432/database_name'
+# Creating a SQLite database engine
+engine = create_engine('sqlite:///your_database.db')
+
+# Reading data from a SQL table into a DataFrame
+df_sql = pd.read_sql_table('your_table', con=engine)
+
+# Display the first few rows of the DataFrame
+print(df_sql.head())
+
+Create database
+create a table
+read table to make dataframe
